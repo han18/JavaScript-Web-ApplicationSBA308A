@@ -1,8 +1,9 @@
 
 
 body {
-    background: url("images/world-img2.jpg");
-    background-repeat: repeat-y;
+    background-image: url("https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg");
+    background-repeat: no-repeat;
+  background-size: cover;
     font-family: Arial, sans-serif;
     text-align: center;
 }
