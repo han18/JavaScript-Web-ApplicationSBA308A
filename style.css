@@ -9,18 +9,21 @@ body {
 }
 
 #main-container {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 2px solid red;
+    /* height: 600px; */
 }
 
 
-img {
+.img-two {
     width: 350px;
     height: auto;
     border: 2px solid green;
-    float: left
+    /* float: left; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 /* p {
@@ -34,6 +37,7 @@ img {
 
 
 h2 {
+    margin-top: 20px;
     color: red
 }
 
@@ -44,12 +48,14 @@ h2 {
     justify-content: space-around;
     align-items: center;
     margin-top: 25px;
+    /* margin-bottom: 30px; */
     width: 600px;
-    
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;    
 }
 
 .testing {
-    color:rgb(101, 94, 141);
+    color:rgb(8, 2, 42);
     /* font-weight: bold; */
     text-align: center;
 }
@@ -89,4 +95,12 @@ h2 {
 .button:active {
   background: var(--color);
   color: #fff;
+}
+
+img {
+    width: 350px;
+    height: auto;
+    /* border: 2px solid green; */
+    /* float: left; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }

@@ -48,19 +48,37 @@ async function getRandomCountry() {
     // getting the languages since the value for each country changes
     const languages = Object.values(country.languages).join(", ");
 
+// Get all currencies in a readable format
+    const currencies = Object.values(country.currencies)
+      .map(currency => `${currency.name} (${currency.symbol})`)
+      .join(", ");
+
     // displaying country details in the main div container
     let textSpace = " ";
     mainDiv.innerHTML = `
             <h1>${country.name.common}</h1>
-            <img src="${country.flags.png}"/>
+         <span class="img-two"> <img src="${country.flags.png}"/></span>  
 
             <div id="first-div">
             <p class="testing" ><strong>Capital:</strong> ${textSpace} ${country.capital[0]} </p>
-            <p class="testing"><strong>Language:</strong> ${languages}</p>
+            <p class="testing"><strong>Language:</strong> ${textSpace}  ${languages}</p>
+            </div>
+
+
+             <div id="first-div"> 
+             <p class="testing"><strong>Continent:</strong> ${textSpace} ${country.continents}</p>
+            <p class="testing" ><strong>Region:</strong> ${textSpace} ${country.subregion} </p>
             </div>
             
-            <p><strong>Region:</strong>  ${country.continents} <strong>Continent:</strong>  ${country.region}</p>
-            <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+             <div id="first-div">
+            <p class="testing" ><strong>Currency:</strong> ${textSpace} ${currencies} </p>
+            <p class="testing"><strong>Population:</strong> ${textSpace}  ${country.population.toLocaleString()}</p>
+            </div>
+
+             <h2> Coat of Arms <h2>
+             <div id="first-div">
+          <p class="testing" ><strong></strong>  <img src="${country.coatOfArms.png}"/></p>
+            </div>
           `;
   } catch (error) {
     console.error("Error fetching country data:", error);
