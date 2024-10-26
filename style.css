@@ -17,7 +17,7 @@ body {
 
 
 img {
-    width: 400px;
+    width: 350px;
     height: auto;
     border: 2px solid green;
     float: left
@@ -43,13 +43,14 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 20px solid rgb(31, 3, 8);
-    width: 700px;
+    margin-top: 25px;
+    width: 600px;
+    
 }
 
 .testing {
-    color:blueviolet;
-    font-weight: bold;
+    color:rgb(101, 94, 141);
+    /* font-weight: bold; */
     text-align: center;
 }
 
