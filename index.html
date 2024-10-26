@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script defer src="main.js"></script>
     <title>SBA Assigment</title>
 </head>
 <body>
     <h1>This is an API Project</h1>
-
+<!-- 
+    <header>
     <div id="main-container">
-        <input type="text">
-
-
+        removed the onclick because am using it differently
+        <button onclick="getRandomCountry()">Get Random Country</button>
     </div>
+</header> -->
+
+    <!-- starts here below  -->
+    <h1>Random Country Information</h1>
+  <button onclick="getRandomCountry()">Get Random Country</button>
+  
+  <div id="main-container" style="margin-top: 20px;">
+    <!-- Country details will be displayed here -->
+  </div>
+  
+  
+
+
 </body>
 </html>
