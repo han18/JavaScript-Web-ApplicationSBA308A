@@ -38,17 +38,21 @@ async function getRandomCountry() {
         try {
           const response = await axios.get(BASE_URL); // used axios for better request
           const countries = response.data;
+          console.log(countries);
     
           // Select a random country from the list
           const randomIndex = Math.floor(Math.random() * countries.length);
+          // country hold all the data
           const country = countries[randomIndex];
     
           // displaying country details in the main div container
           mainDiv.innerHTML = `
             <h1>${country.name.common}</h1>
-            <img src="${country.flags.png}" alt="Flag of ${country.name.common}" width="200" />
-            <p><strong>Capital:</strong> ${country.capital[0]}</p>
-            <p><strong>Region:</strong> ${country.region}</p>
+            <img src="${country.flags.png}" width="200" />
+            <div id="first-div">
+            <p id="testing"><strong>Capital:</strong> ${country.capital[0]} ${country.capital[0]}</p>
+            </div>
+            <p><strong>Region:</strong>  ${country.continents} <strong>Continent:</strong>  ${country.region}</p>
             <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
           `;
         } catch (error) {
