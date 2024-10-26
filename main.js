@@ -40,7 +40,7 @@ async function getRandomCountry() {
     const countries = response.data;
     console.log(countries);
 
-    // Select a random country from the list
+    // seleting a random country from the api
     const randomIndex = Math.floor(Math.random() * countries.length);
     // variable to hold all the data of the countries country hold all the data
     const country = countries[randomIndex];
@@ -57,7 +57,7 @@ async function getRandomCountry() {
     let textSpace = " ";
     mainDiv.innerHTML = `
             <h1>${country.name.common}</h1>
-         <span class="img-two"> <img src="${country.flags.png}"/></span>  
+         <img src="${country.flags.png}">
 
             <div id="first-div">
             <p class="testing" ><strong>Capital:</strong> ${textSpace} ${country.capital[0]} </p>
@@ -75,8 +75,9 @@ async function getRandomCountry() {
             <p class="testing"><strong>Population:</strong> ${textSpace}  ${country.population.toLocaleString()}</p>
             </div>
 
-             <h2> Coat of Arms <h2>
+           
              <div id="first-div">
+               <h2> Coat of Arms <h2>
           <p class="testing" ><strong></strong>  <img src="${country.coatOfArms.png}"/></p>
             </div>
           `;
