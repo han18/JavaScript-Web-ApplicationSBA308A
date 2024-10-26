@@ -27,28 +27,29 @@ async function fetchData() {
 
 fetchData();
 
+//=====================================================================
 
-
+// retriving the div
 const mainDiv = document.getElementById("main-container");
 
 // storing the url in a variable
 const BASE_URL = "https://restcountries.com/v3.1/all";
 async function getRandomCountry() {
         try {
-          const response = await axios.get(BASE_URL);
+          const response = await axios.get(BASE_URL); // used axios for better request
           const countries = response.data;
     
           // Select a random country from the list
           const randomIndex = Math.floor(Math.random() * countries.length);
           const country = countries[randomIndex];
     
-          // Display country details
+          // displaying country details in the main div container
           mainDiv.innerHTML = `
-            <h2>${country.name.common}</h2>
+            <h1>${country.name.common}</h1>
+            <img src="${country.flags.png}" alt="Flag of ${country.name.common}" width="200" />
             <p><strong>Capital:</strong> ${country.capital[0]}</p>
             <p><strong>Region:</strong> ${country.region}</p>
             <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-            <img src="${country.flags.png}" alt="Flag of ${country.name.common}" width="200" />
           `;
         } catch (error) {
           console.error("Error fetching country data:", error);

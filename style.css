@@ -1,8 +1,8 @@
-body {
-    background-color: rgb(160, 158, 158);
-}
+
 
 body {
+    background: url("images/world-img2.jpg");
+    background-repeat: repeat-y;
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 img {
-    width: 100px;
+    width: 400px;
     height: auto;
 }
 
