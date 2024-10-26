@@ -48,9 +48,10 @@ async function getRandomCountry() {
           // displaying country details in the main div container
           mainDiv.innerHTML = `
             <h1>${country.name.common}</h1>
-            <img src="${country.flags.png}" width="200" />
+            <img src="${country.flags.png}"/>
             <div id="first-div">
-            <p id="testing"><strong>Capital:</strong> ${country.capital[0]} ${country.capital[0]}</p>
+            <p class="testing"><strong> Capital:</strong> ${ country.capital[0]} </p>
+            <p class="testing"><strong>Capital:</strong> ${country.capital[0]} ${country.capital[0]}</p>
             </div>
             <p><strong>Region:</strong>  ${country.continents} <strong>Continent:</strong>  ${country.region}</p>
             <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
