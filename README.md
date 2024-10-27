@@ -1,6 +1,6 @@
 # JavaScript-Web-ApplicationSBA308A
 
-![Alt text](./images/world-img5.png)
+![Alt text](./images/read-img.png)
 
 In this SBA assignment I used a simple API to fetch data using axios of countries and their 
 values, such as the capital, population, language etc.
