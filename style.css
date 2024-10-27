@@ -39,14 +39,18 @@ p {
 h1 {
   text-align: left;
   font-family: cursive;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 30px;
 }
 
 h3 {
-  /* background-color: white;
-    width: 600px;
-    margin: auto;
-    height: 50px; */
+   font-size: 1.5rem; 
+   color: rgb(10, 9, 9);
+   background-color: #cccfd850;
+   width: 700px;
+   text-align: center;
+   margin: auto;
+   margin-bottom: 10px;
+   border-radius: 5px;
 }
 
 h2 {
@@ -71,13 +75,15 @@ h2 {
 
 .testing {
   color: rgb(8, 2, 42);
-  font-family:monospace;
+  /* font-family:monospace; */
   text-align: center;
 }
 
 .button {
+    font-family:cursive;
+    font-weight: bold;
   --b: 5px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
+  --s: 0.50em; /* size of the corner */
   --color: #373b44;
   margin: 20px;
 
@@ -123,4 +129,9 @@ img {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
   border-radius: 10px;
 
+}
+
+strong {
+    color: rgb(41, 5, 138);
+    font-size: large;
 }
