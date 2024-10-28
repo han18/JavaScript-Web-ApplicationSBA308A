@@ -87,12 +87,13 @@ h2 {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.testing {
-  color: rgb(8, 2, 42);
+.testing  {
+  color: rgb(16, 1, 101);
   /* font-family:monospace; */
   text-align: center;
 }
 
+/* this is for the button design */
 .button {
     font-family:cursive;
     font-weight: bold;
@@ -145,8 +146,8 @@ img {
 
 }
 
-/* span {
+span {
   color: #01046e;
   text-shadow: 2px 2px 5px rgba(26, 56, 248, 0.447);
   font-size: 20px;
-} */
+}
