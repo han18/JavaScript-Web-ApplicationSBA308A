@@ -47,4 +47,22 @@ async function getRandomCountry() {
     firstDiv.appendChild(language);
     mainDiv.appendChild(firstDiv);
 
+    // Continent and Region div
+    const secondDiv = document.createElement("div");
+    secondDiv.id = "first-div";
+    const continent = createTextElement("p", `Continent: ${country.continents}`, "testing");
+    const region = createTextElement("p", `Region: ${country.subregion}`, "testing");
+    secondDiv.appendChild(continent);
+    secondDiv.appendChild(region);
+    mainDiv.appendChild(secondDiv);
+
+    // Currency and Population div
+    const thirdDiv = document.createElement("div");
+    thirdDiv.id = "first-div";
+    const currency = createTextElement("p", `Currency: ${currencies}`, "testing");
+    const population = createTextElement("p", `Population: ${country.population.toLocaleString()}`, "testing");
+    thirdDiv.appendChild(currency);
+    thirdDiv.appendChild(population);
+    mainDiv.appendChild(thirdDiv);
+
     
