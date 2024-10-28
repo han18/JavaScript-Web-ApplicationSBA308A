@@ -1,5 +1,16 @@
 // import { fetchData } from './fetch.js'; // Adjust path if necessary
 
+// const button = document.querySelector("button");
+
+// calling the function from the fetch.js file
+// import { fetchData } from './fetch.js'; 
+
+// // calling and testing fetch function from fetch.js
+// fetchData()
+//=====================================================================
+
+
+
 const mainDiv = document.getElementById("main-container");
 const BASE_URL = "https://restcountries.com/v3.1/all";
 
@@ -34,7 +45,7 @@ async function getRandomCountry() {
     const nameHeading = createTextElement("h1", country.name.common);
     mainDiv.appendChild(nameHeading);
 
-    // th country flags
+    // the country flags
     const flagImg = document.createElement("img");
     flagImg.src = country.flags.png;
     flagImg.alt = `${country.name.common} Flag`;
@@ -45,6 +56,7 @@ async function getRandomCountry() {
     firstDiv.id = "first-div";
     const capital = createTextElement("p", `Capital: ${country.capital[0]}`, "testing");
     const language = createTextElement("p", `Language: ${languages}`, "testing");
+    firstDiv.style.color = "blue";
     firstDiv.appendChild(capital);
     firstDiv.appendChild(language);
     mainDiv.appendChild(firstDiv);
