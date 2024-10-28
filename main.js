@@ -42,25 +42,25 @@ async function getRandomCountry() {
          <img src="${country.flags.png}">
 
             <div id="first-div">
-            <p class="testing" ><strong>Capital:</strong> ${textSpace} ${country.capital[0]} </p>
-            <p class="testing"><strong>Language:</strong> ${textSpace}  ${languages}</p>
+            <p class="testing" ><span>Capital:</span> ${textSpace} ${country.capital[0]} </p>
+            <p class="testing"><span>Language:</span> ${textSpace}  ${languages}</p>
             </div>
 
 
              <div id="first-div"> 
-             <p class="testing"><strong>Continent:</strong> ${textSpace} ${country.continents}</p>
-            <p class="testing" ><strong>Region:</strong> ${textSpace} ${country.subregion} </p>
+             <p class="testing"><span>Continent:</span> ${textSpace} ${country.continents}</p>
+            <p class="testing" ><span>Region:</span> ${textSpace} ${country.subregion} </p>
             </div>
             
              <div id="first-div">
-            <p class="testing" ><strong>Currency:</strong> ${textSpace} ${currencies} </p>
-            <p class="testing"><strong>Population:</strong> ${textSpace}  ${country.population.toLocaleString()}</p>
+            <p class="testing" ><span>Currency:</span> ${textSpace} ${currencies} </p>
+            <p class="testing"><span>Population:</span> ${textSpace}  ${country.population.toLocaleString()}</p>
             </div>
 
            
              <div id="first-div">
                <h2> Coat of Arms <h2>
-          <p class="testing" ><strong></strong>  <img src="${country.coatOfArms.png}"/></p>
+          <p class="testing" ><span></span>  <img src="${country.coatOfArms.png}"/></p>
             </div>
           `;
   } catch (error) {

@@ -19,17 +19,3 @@ export async function fetchData() {
     }
 }
 
-// Uncomment if needed elsewhere
-// export function peopleName() {
-//     return "This is the fetch file";
-// }
-
-
-// this code did not work
-// export function peopleName() {
-//     return "This is the fetch file";
-    
-// }
-
-
-// console.log(peopleName());
