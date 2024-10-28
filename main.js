@@ -5,22 +5,24 @@ const BASE_URL = "https://restcountries.com/v3.1/all";
 
 async function getRandomCountry() {
   try {
-    const response = await axios.get(BASE_URL); // Fetch data with Axios
+    const response = await axios.get(BASE_URL); // used axios to fetch data for better response 
     const countries = response.data;
     console.log(countries);
 
+      // setting the random country
     const randomIndex = Math.floor(Math.random() * countries.length);
     const country = countries[randomIndex];
 
+     // getting the languages since the value for each country changes
     const languages = Object.values(country.languages).join(", ");
     const currencies = Object.values(country.currencies)
       .map(currency => `${currency.name} (${currency.symbol})`)
       .join(", ");
       
-    // Clear previous content
+    // clearing the content to keep selecting countries
     mainDiv.innerHTML = "";
 
-    // Function to create and append text to a div
+    // to create and append text to the div
     function createTextElement(tag, textContent, className) {
       const element = document.createElement(tag);
       if (className) element.className = className;
@@ -28,17 +30,17 @@ async function getRandomCountry() {
       return element;
     }
 
-    // Main country name
+    // the country names
     const nameHeading = createTextElement("h1", country.name.common);
     mainDiv.appendChild(nameHeading);
 
-    // Country flag
+    // th country flags
     const flagImg = document.createElement("img");
     flagImg.src = country.flags.png;
     flagImg.alt = `${country.name.common} Flag`;
     mainDiv.appendChild(flagImg);
 
-    // Capital and Language div
+    // the capital and language div
     const firstDiv = document.createElement("div");
     firstDiv.id = "first-div";
     const capital = createTextElement("p", `Capital: ${country.capital[0]}`, "testing");
@@ -47,7 +49,7 @@ async function getRandomCountry() {
     firstDiv.appendChild(language);
     mainDiv.appendChild(firstDiv);
 
-    // Continent and Region div
+    // the continent and region div
     const secondDiv = document.createElement("div");
     secondDiv.id = "first-div";
     const continent = createTextElement("p", `Continent: ${country.continents}`, "testing");
@@ -56,7 +58,7 @@ async function getRandomCountry() {
     secondDiv.appendChild(region);
     mainDiv.appendChild(secondDiv);
 
-    // Currency and Population div
+    // currency and population 
     const thirdDiv = document.createElement("div");
     thirdDiv.id = "first-div";
     const currency = createTextElement("p", `Currency: ${currencies}`, "testing");
@@ -65,4 +67,21 @@ async function getRandomCountry() {
     thirdDiv.appendChild(population);
     mainDiv.appendChild(thirdDiv);
 
-    
+    // the is the coat of arms section
+    const coatOfArmsDiv = document.createElement("div");
+    coatOfArmsDiv.id = "first-div";
+    const coatOfArmsHeading = createTextElement("h2", "Coat of Arms");
+    const coatOfArmsImg = document.createElement("img");
+    coatOfArmsImg.src = country.coatOfArms.png;
+    coatOfArmsImg.alt = `${country.name.common} Coat of Arms`;
+    coatOfArmsDiv.appendChild(coatOfArmsHeading);
+    coatOfArmsDiv.appendChild(coatOfArmsImg);
+    mainDiv.appendChild(coatOfArmsDiv);
+  } catch (error) {
+    console.error("Error fetching country data:", error);
+    mainDiv.innerHTML = "<p>Failed to fetch country data. Try again!</p>";
+  }
+}
+
+/// calling the function will load the api without clicking the search button
+// getRandomCountry();
