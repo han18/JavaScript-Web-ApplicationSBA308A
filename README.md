@@ -12,8 +12,8 @@ URL of the API https://restcountries.com/v3.1/all
 
 This API did not require any API key or Tokens
 
-used multiple design structure 
+used multiple design implementing
 
-created another JS "fetch.js" as a ready base function to check out other APIs 
-the fetch.js file exports the function
+created another JS file "fetch.js" as a ready base function to check out other APIs 
+the and to exports data
 
