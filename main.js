@@ -65,7 +65,7 @@ async function getRandomCountry() {
           `;
   } catch (error) {
     console.error("Error fetching country data:", error);
-    mainDiv.innerHTML = "<p>Failed to fetch country data.</p>";
+    mainDiv.innerHTML = "<p>Failed to fetch country data. Try again!.</p>";
   }
 }
 
