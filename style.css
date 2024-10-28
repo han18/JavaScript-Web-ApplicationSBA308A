@@ -38,8 +38,10 @@ p {
 
 h1 {
   text-align: left;
-  font-family: cursive;
-  margin: 20px 0 0 30px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* margin: 20px 0 0 30px; */
+  color: #373b44;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
