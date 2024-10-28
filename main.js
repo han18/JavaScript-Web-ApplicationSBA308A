@@ -22,9 +22,9 @@ async function getRandomCountry() {
     console.log(countries);
 
     // seleting a random country from the api
-    const randomIndex = Math.floor(Math.random() * countries.length);
+    const randomSearch = Math.floor(Math.random() * countries.length);
     // variable to hold all the data of the countries country hold all the data
-    const country = countries[randomIndex];
+    const country = countries[randomSearch];
 
     // getting the languages since the value for each country changes
     const languages = Object.values(country.languages).join(", ");
@@ -68,5 +68,5 @@ async function getRandomCountry() {
   }
 }
 
-/// calling the function loades the api without clicking to search
+/// calling the function will load the api without clicking the search button
 // getRandomCountry();

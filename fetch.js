@@ -1,4 +1,6 @@
-// // this fetch is to check out other apis object 
+// // this fetch is to check out other apis 
+
+
 
 export async function fetchData() {
     const url = "https://catfact.ninja/fact";
