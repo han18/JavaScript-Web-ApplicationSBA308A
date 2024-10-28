@@ -22,6 +22,7 @@ body {
   /* height: 600px; */
 }
 
+/* this class applies to both the flag and coat of arms */
 .img-two {
   width: 350px;
   height: auto;
@@ -36,6 +37,7 @@ p {
   font-weight: bold;
 }
 
+/* this is the logo h1  */
 .headerOne {
   text-align: left;
   font-family:cursive;
@@ -143,8 +145,8 @@ img {
 
 }
 
-span {
+/* span {
   color: #01046e;
   text-shadow: 2px 2px 5px rgba(26, 56, 248, 0.447);
   font-size: 20px;
-}
+} */

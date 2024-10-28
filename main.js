@@ -64,6 +64,7 @@ async function getRandomCountry() {
     // the continent and region div
     const secondDiv = document.createElement("div");
     secondDiv.id = "first-div";
+    // using testing class
     const continent = createTextElement("p", `Continent: ${country.continents}`, "testing");
     const region = createTextElement("p", `Region: ${country.subregion}`, "testing");
     secondDiv.appendChild(continent);
