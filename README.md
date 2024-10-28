@@ -14,3 +14,6 @@ This API did not require any API key or Tokens
 
 used multiple design structure 
 
+created another JS "fetch.js" as a ready base function to check out other APIs 
+the fetch.js file exports the function
+
