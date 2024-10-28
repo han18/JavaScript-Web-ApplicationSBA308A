@@ -36,12 +36,22 @@ p {
   font-weight: bold;
 }
 
-h1 {
+.headerOne {
   text-align: left;
+  font-family:cursive;
+  margin: 20px 0 0 30px;
+  color: #373b44;
+  text-shadow: 2px 2px 5px rgba(124, 122, 122, 0.591);
+
+}
+
+h1 {
+  /* text-align: left; */
+  font-weight: bold;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   /* margin: 20px 0 0 30px; */
-  color: #373b44;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  color: #01046e;
+  text-shadow: 2px 2px 5px rgba(26, 56, 248, 0.719);
 }
 
 h3 {
