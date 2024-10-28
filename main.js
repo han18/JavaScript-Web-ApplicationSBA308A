@@ -2,7 +2,12 @@
 
 // const button = document.querySelector("button");
 
+// calling the function from the fetch.js file
 
+import { fetchData } from './fetch.js'; // importing the function from fetch.js
+
+// calling the fetchData from main.js
+fetchData();
 //=====================================================================
 
 // retriving the div
