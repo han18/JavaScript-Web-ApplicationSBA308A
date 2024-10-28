@@ -12,4 +12,20 @@ async function getRandomCountry() {
     const randomIndex = Math.floor(Math.random() * countries.length);
     const country = countries[randomIndex];
 
-   
+    const languages = Object.values(country.languages).join(", ");
+    const currencies = Object.values(country.currencies)
+      .map(currency => `${currency.name} (${currency.symbol})`)
+      .join(", ");
+      
+    // Clear previous content
+    mainDiv.innerHTML = "";
+
+    // Function to create and append text to a div
+    function createTextElement(tag, textContent, className) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      element.textContent = textContent;
+      return element;
+    }
+
+    
