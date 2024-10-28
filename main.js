@@ -4,10 +4,10 @@
 
 // calling the function from the fetch.js file
 
-// import { fetchData } from './fetch.js'; // importing the function from fetch.js
+// import { fetchData } from './fetch.js'; // Adjust path if in a different directory
 
-// // calling the fetchData 
-// fetchData();
+// // calling and testing fetch function from `fetch.js`
+// fetchData()
 //=====================================================================
 
 // retriving the div
@@ -15,6 +15,7 @@ const mainDiv = document.getElementById("main-container");
 
 // storing the url in a variable
 const BASE_URL = "https://restcountries.com/v3.1/all";
+
 async function getRandomCountry() {
   try {
     const response = await axios.get(BASE_URL); // used axios for better request
@@ -29,7 +30,7 @@ async function getRandomCountry() {
     // getting the languages since the value for each country changes
     const languages = Object.values(country.languages).join(", ");
 
-// Get all currencies in a readable format
+// getting all the currencies in and mapping through the property since the property hold other property
     const currencies = Object.values(country.currencies)
       .map(currency => `${currency.name} (${currency.symbol})`)
       .join(", ");
@@ -70,3 +71,4 @@ async function getRandomCountry() {
 
 /// calling the function will load the api without clicking the search button
 // getRandomCountry();
+

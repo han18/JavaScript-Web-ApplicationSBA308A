@@ -1,28 +1,28 @@
 // // this fetch is to check out other apis 
 
 
-
+// exporting the function so that it can be used in other files
 export async function fetchData() {
     const url = "https://catfact.ninja/fact";
   
     try {
-      const response = await fetch(url);
-  
-      //checking if there is no response
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-  
-      // converting the data into a json formate
-      const data = await response.json();
-      console.log(data);
-      // cheking if there r errors while fetching
+        const response = await fetch(url);
+      
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+      
+        const data = await response.json();
+        console.log(data);
     } catch (error) {
-      console.error("Error:", error);
+        console.error("Error:", error);
     }
-  }
-  
-  fetchData();
+}
+
+// Uncomment if needed elsewhere
+// export function peopleName() {
+//     return "This is the fetch file";
+// }
 
 
 // this code did not work
