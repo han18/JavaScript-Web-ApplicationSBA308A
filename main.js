@@ -28,4 +28,23 @@ async function getRandomCountry() {
       return element;
     }
 
+    // Main country name
+    const nameHeading = createTextElement("h1", country.name.common);
+    mainDiv.appendChild(nameHeading);
+
+    // Country flag
+    const flagImg = document.createElement("img");
+    flagImg.src = country.flags.png;
+    flagImg.alt = `${country.name.common} Flag`;
+    mainDiv.appendChild(flagImg);
+
+    // Capital and Language div
+    const firstDiv = document.createElement("div");
+    firstDiv.id = "first-div";
+    const capital = createTextElement("p", `Capital: ${country.capital[0]}`, "testing");
+    const language = createTextElement("p", `Language: ${languages}`, "testing");
+    firstDiv.appendChild(capital);
+    firstDiv.appendChild(language);
+    mainDiv.appendChild(firstDiv);
+
     
