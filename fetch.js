@@ -1,7 +1,7 @@
 // // this fetch is to check out other apis object 
 
 export async function fetchData() {
-    const url = "https://restcountries.com/v3.1/all";
+    const url = "https://catfact.ninja/fact";
   
     try {
       const response = await fetch(url);
@@ -21,3 +21,13 @@ export async function fetchData() {
   }
   
   fetchData();
+
+
+// this code did not work
+// export function peopleName() {
+//     return "This is the fetch file";
+    
+// }
+
+
+// console.log(peopleName());

@@ -4,10 +4,10 @@
 
 // calling the function from the fetch.js file
 
-import { fetchData } from './fetch.js'; // importing the function from fetch.js
+// import { fetchData } from './fetch.js'; // importing the function from fetch.js
 
-// calling the fetchData from main.js
-fetchData();
+// // calling the fetchData 
+// fetchData();
 //=====================================================================
 
 // retriving the div
@@ -67,3 +67,6 @@ async function getRandomCountry() {
     mainDiv.innerHTML = "<p>Failed to fetch country data.</p>";
   }
 }
+
+/// calling the function loades the api without clicking to search
+// getRandomCountry();
