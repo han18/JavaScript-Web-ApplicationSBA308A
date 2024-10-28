@@ -45,13 +45,13 @@ h1 {
 h3 {
    font-size: 1.5rem; 
    color: rgb(10, 9, 9);
-   background-color: #cccfd850;
+   background-color: #cccfd845;
    width: 700px;
    text-align: center;
    margin: auto;
    margin-bottom: 10px;
    border-radius: 5px;
-}
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);}
 
 h2 {
   margin-top: 20px;
